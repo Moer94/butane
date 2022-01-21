@@ -1,0 +1,47 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "groups": [
+          "docker",
+          "wheel",
+          "sudo"
+        ],
+        "name": "core",
+        "passwordHash": "$y$j9T$n6h8P2ik8tfoNUFBBoly00$7bnrMF8oFrB25Fc3NqigqEH/MI5YXIJwtCG/iEsns.2",
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyFJ8U7/UpZzMINlxbA5GvyKETfvJtB/BnHnDB7nHtp1L8UOdPXsXffgXycHLFdMbgIA5o936ymR3TCFsEqaTexa6UDR4gl01Nnz5ioIYUUfXGxqx40jHuZieAs88kiggkzXJRAceFNTIT4IGqL9bybC10ZmA/zYMZnnOckrxoUtHC8Udr4u9sSqgr6Rv3dMdB5EF/wi5G9bMBL8xS3dT/5WRyCiL1OArYsK0OfkFn+2pMyZI4Tbh6ImBZntnURsn1lO3wcRJsZXgxD8WP0ssLu6+HBKySgVeoqOGQrHQ3oYDa5q7f72DR6cXGg+8KaDPkd2Nm8Qhg4dJHD+E7H1YCZlJLrq0C10aARBhHk8/y33oH556t+zTELc+wXXOCtzKZugnzGtOV/Rlcz26V2ra/qr6wdKbv+U/aojJNx2b084bb9gXUFwZKkGi0X3ilV0uTSqbvPobHCdWas/IixbEbOAZ+AihNAD8TzzhGM5w4181D5+MK2pjyREjQtkXl9xbZyBohcO04qJf4Ompt51nSTMRO7d439e3+i89sJM3SxHG6PHiH6Att6nCL41Y99rqXsUVPmEoIwztGGdUgah2d3sivGVcZCn/6ARUnu0wjP8peK3wvl15IK7I9B08YKgmvHlBKn8kyGuZ34jtzP0TTuah9FoOResbkvkTj8XYwsw== mohammadali.erfani@stud.th-deg.de"
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/sysctl.d/20-silence-audit.conf",
+        "contents": {
+          "source": "data:,kernel.printk%3D4%0A"
+        }
+      },
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "source": "data:,fcos"
+        },
+        "mode": 420
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/NetworkManager/system-connections/enp1s0.nmconnection",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/1TKwQqCQBDG8fs8hXhvU5NQYp+jg3gYnK9cyHHZnQrfPuhQ+H3H/2+YVlVMFlYdybYID5uRFEZBfHkNCVL8TdGUFNSQbjzhoLzAQ2OVT0RDiK92pAU2r+IX1ic/iEUSckb2dd+4+ty5vnd1VR2blu5sePO2KyS6p5fOfV/8Rp8AAAD//9fPfUizAAAA"
+        },
+        "mode": 384
+      }
+    ]
+  }
+}
