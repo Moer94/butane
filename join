@@ -1,5 +1,5 @@
 #!/bin/bash
-JOIN_TOKEN=exwly2.92xy610d0zt0h
+JOIN_TOKEN=exwly2.92xc2xy610d0zt0h
 JOIN_CERT_HASH=af7ffe8b6329deb282b56e6fc80d83b36433abaa52cc2763fbde3ed26b9d0b73
 
 cat <<EOF > kubeadm-join.yaml
