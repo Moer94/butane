@@ -1,3 +1,4 @@
+#!/bin/bash
 JOIN_TOKEN=exwly2.92xy610d0zt0h
 JOIN_CERT_HASH=af7ffe8b6329deb282b56e6fc80d83b36433abaa52cc2763fbde3ed26b9d0b73
 
@@ -17,3 +18,4 @@ EOF
 
 # verify whether variables are substituted properly 
 cat kubeadm-join.yaml
+sudo kubeadm join --config kubeadm-join.yaml
