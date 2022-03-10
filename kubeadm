@@ -19,8 +19,6 @@ apiServer:
   extraArgs:
     advertise-address: 192.168.99.101
 
-EOF
-
 sudo kubeadm init --config kubeadm-init.yaml
 
 mkdir -p $HOME/.kube
