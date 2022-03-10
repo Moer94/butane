@@ -1,0 +1,24 @@
+#!/bin/bash
+sudo hostnamectl set-hostname master
+
+# ensure that product_uuid is unique
+sudo cat /sys/class/dmi/id/product_uuid
+
+# reset machine id to product uuid
+sudo rm /etc/machine-id
+sudo systemd-machine-id-setup
+sudo systemd-machine-id-setup --commit
+
+# change static ip 
+sudo nmcli connection   # find the <connection name>
+
+sudo nmcli connection mod <connection-name> \
+     ipv4.method manual \
+     ipv4.addresses 192.168.99.101/24 \
+     ipv4.gateway 192.168.99.1 \
+     ipv4.dns 192.168.99.1 \
+     +ipv4.dns 8.8.8.8 \
+     connection.autoconnect yes
+
+sudo systemctl restart NetworkManager
+sudo systemctl reboot   
